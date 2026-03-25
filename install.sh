@@ -82,9 +82,16 @@ fi
 
 # Systemd coredump (sudo gerekir)
 if [ -f "etc/systemd/coredump.conf.d/99-antigravity.conf" ]; then
-    echo "🛡️ Systemd coredump ayarı kopyalanıyor (root yetkisi gerekebilir)..."
+    echo "🛡️ Systemd coredump ayarı kopyalanıyor..."
     sudo mkdir -p /etc/systemd/coredump.conf.d
     sudo cp -v etc/systemd/coredump.conf.d/99-antigravity.conf /etc/systemd/coredump.conf.d/
+fi
+
+# Greetd config (sudo gerekir)
+if [ -f "etc/greetd/config.toml" ]; then
+    echo "🛡️ Greetd yapılandırması kopyalanıyor..."
+    sudo mkdir -p /etc/greetd
+    sudo cp -v etc/greetd/config.toml /etc/greetd/config.toml
 fi
 
 echo "✅ Kurulum tamamlandı! Değişikliklerin etkili olması için oturumu kapatıp açmayı veya sistemi yeniden başlatmayı unutmayın."
