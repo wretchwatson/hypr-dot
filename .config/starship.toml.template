@@ -1,0 +1,69 @@
+# starship.toml.template
+format = """
+[░▒▓](@COLOR3@)\
+[ 󰭟 ](bg:@COLOR3@ fg:@BACKGROUND@)\
+[](fg:@COLOR3@ bg:@COLOR1@)\
+$directory\
+[](fg:@COLOR1@ bg:@COLOR2@)\
+$git_branch\
+$git_status\
+[](fg:@COLOR2@ bg:@BACKGROUND@)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:@BACKGROUND@ bg:@BACKGROUND@)\
+$time\
+[ ](fg:@BACKGROUND@)\
+\n$character"""
+
+right_format = """$cmd_duration"""
+
+[directory]
+style = "fg:@BACKGROUND@ bg:@COLOR1@"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:@COLOR2@"
+format = "[[ $symbol $branch ](fg:@FOREGROUND@ bg:@COLOR2@)]($style)"
+
+[git_status]
+style = "bg:@COLOR2@"
+format = "[[($all_status$ahead_behind )](fg:@COLOR3@ bg:@COLOR2@)]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:@BACKGROUND@"
+format = "[[ $symbol ($version) ](fg:@COLOR4@ bg:@BACKGROUND@)]($style)"
+
+[rust]
+symbol = ""
+style = "bg:@BACKGROUND@"
+format = "[[ $symbol ($version) ](fg:@COLOR4@ bg:@BACKGROUND@)]($style)"
+
+[golang]
+symbol = ""
+style = "bg:@BACKGROUND@"
+format = "[[ $symbol ($version) ](fg:@COLOR4@ bg:@BACKGROUND@)]($style)"
+
+[php]
+symbol = ""
+style = "bg:@BACKGROUND@"
+format = "[[ $symbol ($version) ](fg:@COLOR4@ bg:@BACKGROUND@)]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:@BACKGROUND@"
+format = "[[  $time ](fg:@FOREGROUND@ bg:@BACKGROUND@)]($style)"
+
+[cmd_duration]
+min_time = 500
+format = "[ $duration](bold @COLOR4@)"
+
+[character]
+success_symbol = "[󰄛 ](bold @COLOR4@)"
+error_symbol = "[󰄛 ](bold @COLOR1@)"

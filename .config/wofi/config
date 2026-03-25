@@ -1,0 +1,15 @@
+width=600
+height=450
+show=drun
+prompt=Search...
+filter_rate=100
+allow_markup=true
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+term=kitty
+hide_scroll=true
+icon_theme=Papirus-Dark
+allow_images=true
+image_size=24

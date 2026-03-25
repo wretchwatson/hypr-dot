@@ -1,0 +1,92 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 2
+    }
+  },
+  "display": {
+    "separator": " 󰁔  ",
+    "color": {
+      "separator": "cyan"
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "color": {
+        "user": "green",
+        "at": "red",
+        "host": "blue"
+      }
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "󰣇 OS",
+      "keyColor": "blue"
+    },
+    {
+      "type": "kernel",
+      "key": "󰒋 Kernel",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "uptime",
+      "key": "󰔚 Uptime",
+      "keyColor": "green"
+    },
+    {
+      "type": "packages",
+      "key": "󰏗 Packages",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "shell",
+      "key": "󰆍 Shell",
+      "keyColor": "magenta"
+    },
+    "break",
+    {
+      "type": "wm",
+      "key": "󰨇 WM",
+      "keyColor": "blue"
+    },
+    {
+      "type": "terminal",
+      "key": "󰆍 Terminal",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "terminalfont",
+      "key": " Font",
+      "keyColor": "green"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": "󰍛 CPU",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "gpu",
+      "key": "󰢮 GPU",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "memory",
+      "key": "󰑭 RAM",
+      "keyColor": "red"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 Disk",
+      "keyColor": "blue"
+    },
+    "break",
+    "colors"
+  ]
+}

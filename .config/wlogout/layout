@@ -1,0 +1,41 @@
+{
+    "label": "lock",
+    "action": "hyprlock",
+    "text": "Kilitle",
+    "keybind": "l"
+}
+
+{
+    "label": "logout",
+    "action": "hyprctl dispatch exit",
+    "text": "Oturumu Kapat",
+    "keybind": "e"
+}
+
+{
+    "label": "suspend",
+    "action": "hyprlock & disown && systemctl suspend",
+    "text": "Askıya Al",
+    "keybind": "u"
+}
+
+{
+    "label": "hibernate",
+    "action": "hyprlock & disown && systemctl hibernate",
+    "text": "Uyut",
+    "keybind": "h"
+}
+
+{
+    "label": "reboot",
+    "action": "systemctl reboot",
+    "text": "Yeniden Başlat",
+    "keybind": "r"
+}
+
+{
+    "label": "shutdown",
+    "action": "systemctl poweroff",
+    "text": "Bilgisayarı Kapat",
+    "keybind": "s"
+}

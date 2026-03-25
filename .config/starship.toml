@@ -1,0 +1,69 @@
+# starship.toml.template
+format = """
+[░▒▓](#4D71B1)\
+[ 󰭟 ](bg:#4D71B1 fg:#0F1A19)\
+[](fg:#4D71B1 bg:#3F61A1)\
+$directory\
+[](fg:#3F61A1 bg:#5F759E)\
+$git_branch\
+$git_status\
+[](fg:#5F759E bg:#0F1A19)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#0F1A19 bg:#0F1A19)\
+$time\
+[ ](fg:#0F1A19)\
+\n$character"""
+
+right_format = """$cmd_duration"""
+
+[directory]
+style = "fg:#0F1A19 bg:#3F61A1"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:#5F759E"
+format = "[[ $symbol $branch ](fg:#bfcde4 bg:#5F759E)]($style)"
+
+[git_status]
+style = "bg:#5F759E"
+format = "[[($all_status$ahead_behind )](fg:#4D71B1 bg:#5F759E)]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#0F1A19"
+format = "[[ $symbol ($version) ](fg:#6683B6 bg:#0F1A19)]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#0F1A19"
+format = "[[ $symbol ($version) ](fg:#6683B6 bg:#0F1A19)]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#0F1A19"
+format = "[[ $symbol ($version) ](fg:#6683B6 bg:#0F1A19)]($style)"
+
+[php]
+symbol = ""
+style = "bg:#0F1A19"
+format = "[[ $symbol ($version) ](fg:#6683B6 bg:#0F1A19)]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#0F1A19"
+format = "[[  $time ](fg:#bfcde4 bg:#0F1A19)]($style)"
+
+[cmd_duration]
+min_time = 500
+format = "[ $duration](bold #6683B6)"
+
+[character]
+success_symbol = "[󰄛 ](bold #6683B6)"
+error_symbol = "[󰄛 ](bold #3F61A1)"

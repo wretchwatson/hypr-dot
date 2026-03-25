@@ -1,0 +1,72 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 2,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "custom/memory",
+        "network",
+        "tray",
+        "pulseaudio",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
+    "clock": {
+        "format": "{:%H:%M - %d %b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "interval": 2,
+        "format-wifi": "  {bandwidthDownBits}  {bandwidthUpBits}",
+        "format-ethernet": "  {bandwidthDownBits}  {bandwidthUpBits}",
+        "format-disconnected": " Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "min-length": 22,
+        "max-length": 22
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "custom/memory": {
+        "format": "{}",
+        "interval": 2,
+        "exec": "free -m | awk '/Mem:/ {mem=$3} /Swap:/ {swap=$3} END {printf \"󰍛 %dMB | 󰓡 %dMB\", mem, swap}'",
+        "tooltip": true,
+        "tooltip-format": "RAM | Swap Kullanımı"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout -b 6"
+    }
+}

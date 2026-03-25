@@ -1,0 +1,21 @@
+# Mako Pywal Template
+font=Comfortaa Bold 11
+text-color=@FOREGROUND@
+
+background-color=@BACKGROUND@E6
+border-color=@COLOR1@
+
+border-size=3
+border-radius=0
+
+width=300
+height=150
+margin=20,20,0,0
+padding=15
+
+default-timeout=6000
+icon-path=/usr/share/icons/Papirus-Dark
+max-icon-size=48
+
+on-button-left=dismiss
+format=<b>%s</b>\n%b

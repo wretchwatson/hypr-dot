@@ -1,0 +1,107 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Comfortaa", "Font Awesome 7 Free", "Font Awesome 7 Brands", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@keyframes blink {
+    to {
+        background-color: @COLOR1@;
+        color: @FOREGROUND@;
+    }
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @FOREGROUND@;
+}
+
+tooltip {
+    background: @BACKGROUND@;
+    border: 1px solid @COLOR5@;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @FOREGROUND@;
+}
+
+#workspaces, #window, #clock, #pulseaudio, #network, #custom-memory, #power-profiles-daemon, #tray, #custom-power {
+    background-color: @BACKGROUND@;
+    border: none;
+    border-radius: 8px;
+    padding: 0 12px;
+    margin: 0 2px;
+    color: @FOREGROUND@;
+}
+
+/* Hyprland Çalışma Alanları */
+#workspaces {
+    padding: 0 4px; /* İç butonlara alan tanımak için dış boşluğu azalttık */
+}
+
+#workspaces button {
+    color: @COLOR7@;
+    background: transparent;
+    padding: 0 8px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    min-height: 10px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: @BACKGROUND@;
+    background-color: @COLOR1@;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#workspaces button:hover {
+    background-color: @COLOR8@;
+    color: @FOREGROUND@;
+}
+
+#workspaces button.urgent {
+    background-color: @COLOR5@;
+    color: @FOREGROUND@;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Güç Menüsü Butonu Özel */
+#custom-power {
+    color: @COLOR1@;
+    font-size: 14px;
+    padding: 0 14px;
+}
+
+/* Durum Simgeleri Renklendirmeleri */
+#clock {
+    color: @COLOR3@;
+}
+
+#pulseaudio {
+    color: @COLOR2@;
+}
+
+#pulseaudio.muted {
+    color: @COLOR1@;
+}
+
+#network {
+    color: @COLOR4@;
+}
+
+#network.disconnected {
+    color: @COLOR1@;
+}
+
+#custom-memory {
+    color: @COLOR6@;
+}

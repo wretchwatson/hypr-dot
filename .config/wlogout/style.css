@@ -1,0 +1,83 @@
+/* 
+ * Wlogout Style Template - Compact Uniform Design
+ * Adapts to wallpaper colors via pywal placeholders
+ */
+
+* {
+    background-image: none;
+    font-family: "Comfortaa", "JetBrainsMono Nerd Font", sans-serif;
+    font-weight: bold;
+    font-size: 14px; /* Biraz küçültüldü */
+}
+
+window {
+    background-color: rgba(15, 15, 25, 0.4);
+}
+
+button {
+    color: #bfcde4;
+    background-color: rgba(30, 30, 46, 0.5);
+    outline-style: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    border-radius: 0px;
+    
+    /* Boyut dengeleme */
+    margin: 40px 0px; 
+    padding: 0px 0px; 
+    min-width: 160px; /* 160px'e güncellendi */
+    
+    transition: all 0.2s ease-in-out;
+}
+
+button:focus {
+    background-color: rgba(30, 30, 46, 0.5);
+    border: none;
+    outline: none;
+}
+
+/* Hover - Sadece dikey büyüme */
+button:hover {
+    background-color: #3F61A1; 
+    color: #0F1A19;
+    background-size: 30%; 
+    margin: 20px 0px;      
+    min-width: 160px;
+}
+
+#lock {
+    background-image: image(url("/home/ridvan/.config/wlogout/icons/lock_white.png"), url("/usr/share/wlogout/icons/lock.png"));
+    margin-left: 100px; /* Ekranın ortasına çekmek için sol-sağ boşluk */
+}
+
+#logout {
+    background-image: image(url("/home/ridvan/.config/wlogout/icons/logout_white.png"), url("/usr/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/ridvan/.config/wlogout/icons/suspend_white.png"), url("/usr/share/wlogout/icons/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/ridvan/.config/wlogout/icons/shutdown_white.png"), url("/usr/share/wlogout/icons/shutdown.png"));
+    margin-right: 100px; /* Grubu kapatmak için sağ boşluk buraya taşındı */
+}
+
+#hibernate {
+    background-image: image(url("/home/ridvan/.config/wlogout/icons/hibernate_white.png"), url("/usr/share/wlogout/icons/hibernate.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/ridvan/.config/wlogout/icons/reboot_white.png"), url("/usr/share/wlogout/icons/reboot.png"));
+}
+
+/* Hover Margins */
+button:hover#lock {
+    margin: 20px 0px 20px 100px;
+}
+
+button:hover#shutdown {
+    margin: 20px 100px 20px 0px;
+}

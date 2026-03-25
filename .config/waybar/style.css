@@ -1,0 +1,107 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Comfortaa", "Font Awesome 7 Free", "Font Awesome 7 Brands", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@keyframes blink {
+    to {
+        background-color: #3F61A1;
+        color: #bfcde4;
+    }
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #bfcde4;
+}
+
+tooltip {
+    background: #0F1A19;
+    border: 1px solid #6B92CA;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #bfcde4;
+}
+
+#workspaces, #window, #clock, #pulseaudio, #network, #custom-memory, #power-profiles-daemon, #tray, #custom-power {
+    background-color: #0F1A19;
+    border: none;
+    border-radius: 8px;
+    padding: 0 12px;
+    margin: 0 2px;
+    color: #bfcde4;
+}
+
+/* Hyprland Çalışma Alanları */
+#workspaces {
+    padding: 0 4px; /* İç butonlara alan tanımak için dış boşluğu azalttık */
+}
+
+#workspaces button {
+    color: #bfcde4;
+    background: transparent;
+    padding: 0 8px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    min-height: 10px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #0F1A19;
+    background-color: #3F61A1;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#workspaces button:hover {
+    background-color: #858f9f;
+    color: #bfcde4;
+}
+
+#workspaces button.urgent {
+    background-color: #6B92CA;
+    color: #bfcde4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Güç Menüsü Butonu Özel */
+#custom-power {
+    color: #3F61A1;
+    font-size: 14px;
+    padding: 0 14px;
+}
+
+/* Durum Simgeleri Renklendirmeleri */
+#clock {
+    color: #4D71B1;
+}
+
+#pulseaudio {
+    color: #5F759E;
+}
+
+#pulseaudio.muted {
+    color: #3F61A1;
+}
+
+#network {
+    color: #6683B6;
+}
+
+#network.disconnected {
+    color: #3F61A1;
+}
+
+#custom-memory {
+    color: #8D95B8;
+}
