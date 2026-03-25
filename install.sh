@@ -92,6 +92,20 @@ if [ -f "etc/greetd/config.toml" ]; then
     echo "🛡️ Greetd yapılandırması kopyalanıyor..."
     sudo mkdir -p /etc/greetd
     sudo cp -v etc/greetd/config.toml /etc/greetd/config.toml
+    
+    echo "🔔 Greetd servisini aktif etmek ister misiniz? (y/n)"
+    read -r enable_greetd
+    if [[ "$enable_greetd" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+        echo "🔄 Diğer display managerlar kontrol ediliyor..."
+        for dm in sddm gdm lightdm ly; do
+            if systemctl is-active --quiet $dm.service; then
+                echo "🛑 $dm servisi durduruluyor ve devre dışı bırakılıyor..."
+                sudo systemctl disable --now $dm.service
+            fi
+        done
+        echo "🚀 Greetd servisi aktif ediliyor..."
+        sudo systemctl enable greetd.service
+    fi
 fi
 
 echo "✅ Kurulum tamamlandı! Değişikliklerin etkili olması için oturumu kapatıp açmayı veya sistemi yeniden başlatmayı unutmayın."
