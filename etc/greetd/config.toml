@@ -1,0 +1,10 @@
+[terminal]
+vt = 1
+
+[initial_session]
+command = "start-hyprland"
+user = "ridvan"
+
+[default_session]
+command = "tuigreet --time --remember --cmd start-hyprland --sessions /usr/share/wayland-sessions --greeting \"Arch Linux | Hyprland\" --theme \"border=magenta;text=cyan;prompt=green;time=yellow;action=blue\""
+user = "greeter"
