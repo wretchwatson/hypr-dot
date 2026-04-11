@@ -18,6 +18,7 @@ efibootmgr
 eza
 fastfetch
 fd
+featherpad
 fish
 freeglut
 fzf
@@ -34,8 +35,8 @@ hyprland
 hyprlock
 imagemagick
 jasper
-jre21-openjdk
 jq
+jre21-openjdk
 kitty
 lib32-libcurl-gnutls
 lib32-nvidia-utils
@@ -85,12 +86,14 @@ slurp
 starship
 steam
 sudo
+systemd-resolvconf
 terminus-font
 ttf-jetbrains-mono-nerd
 unrar
 unzip
 waybar
 wget
+wireguard-tools
 wireplumber
 wofi
 wpa_supplicant

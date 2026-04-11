@@ -5,4 +5,3 @@ spotify-adblock
 ttf-comfortaa
 waypaper
 wlogout
-
