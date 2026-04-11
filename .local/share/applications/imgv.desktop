@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=imgv
-Exec=/usr/bin/imgv %f
-Type=Application
-Terminal=false
-Icon=/usr/share/imgv/data/imgv-icon.png
-Categories=Graphics;
-MimeType=image/bmp;image/gif;image/jpeg;image/png;image/tiff;image/webp;

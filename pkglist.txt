@@ -34,6 +34,7 @@ hypridle
 hyprland
 hyprlock
 imagemagick
+imv
 jasper
 jq
 jre21-openjdk
