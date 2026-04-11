@@ -80,6 +80,12 @@ if [ -d ".local/share/wallpapers" ]; then
     cp -rv .local/share/wallpapers/* ~/.local/share/wallpapers/
 fi
 
+# .local/share/applications
+if [ -d ".local/share/applications" ]; then
+    mkdir -p ~/.local/share/applications
+    cp -rv .local/share/applications/* ~/.local/share/applications/
+fi
+
 # Systemd coredump (sudo gerekir)
 if [ -f "etc/systemd/coredump.conf.d/99-antigravity.conf" ]; then
     echo "🛡️ Systemd coredump ayarı kopyalanıyor..."

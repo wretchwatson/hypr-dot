@@ -1,5 +1,6 @@
 antigravity
 google-chrome
+imgv
 pokemon-colorscripts-fork-git
 spotify-adblock
 ttf-comfortaa
