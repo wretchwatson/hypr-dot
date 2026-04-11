@@ -43,7 +43,7 @@ end
 function __fish_pacman_complete_packages_from_repo
     set -l token (commandline -ct)
     if test (string length -- "$token") -ge 3
-        pacman -Ss -- "$token" 2>/dev/null | grep -E "^(extra|core|community|multilib)/" | awk -F'/' '{split($2, a, " "); printf "%s\t[%s]\n", a[1], $1}'
+        pacman -Ss -- "$token" 2>/dev/null | grep -E "^[^/]+/" | awk -F'/' '{split($2, a, " "); printf "%s\t[%s]\n", a[1], $1}'
     else
         set -l repo (commandline -ct | string replace -fr '^([^/]+)/.*$' '$1')
         __fish_print_pacman_packages --repo=$repo 2>/dev/null

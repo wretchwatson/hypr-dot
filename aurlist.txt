@@ -1,10 +1,8 @@
 antigravity
-curseforge
 google-chrome
 pokemon-colorscripts-fork-git
 spotify-adblock
 ttf-comfortaa
 waypaper
 wlogout
-zenmonitor3
-zenpower3-dkms
+

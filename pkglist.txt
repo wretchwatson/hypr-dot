@@ -35,6 +35,7 @@ hyprlock
 imagemagick
 jasper
 jre21-openjdk
+jq
 kitty
 lib32-libcurl-gnutls
 lib32-nvidia-utils
@@ -46,6 +47,7 @@ libva-utils
 linux-firmware
 linux-lts
 linux-lts-headers
+lxqt-policykit
 mako
 man-db
 materia-gtk-theme
@@ -61,7 +63,6 @@ nvidia-open-lts
 nvidia-settings
 nvidia-utils
 nwg-look
-openresolv
 otf-font-awesome
 papirus-icon-theme
 pavucontrol
