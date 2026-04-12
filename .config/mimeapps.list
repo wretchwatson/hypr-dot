@@ -1,4 +1,3 @@
-
 [Default Applications]
 text/html=google-chrome.desktop
 x-scheme-handler/http=google-chrome.desktop
@@ -12,4 +11,15 @@ image/gif=imv.desktop
 image/bmp=imv.desktop
 image/webp=imv.desktop
 image/tiff=imv.desktop
+application/zip=xarchiver.desktop
+application/x-tar=xarchiver.desktop
+application/x-bzip2=xarchiver.desktop
+application/x-gzip=xarchiver.desktop
+application/x-7z-compressed=xarchiver.desktop
+application/x-rar=xarchiver.desktop
+application/x-xz=xarchiver.desktop
+application/x-compress=xarchiver.desktop
+application/x-compressed-tar=xarchiver.desktop
 
+[Added Associations]
+image/png=imv.desktop;
